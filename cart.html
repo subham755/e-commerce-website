@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Cartify</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="Cart">Your Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="shop.html">Continue Shopping</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cart-container">
+        <div class="cart-message">
+            <!-- Message for empty cart will be inserted here by JavaScript -->
+        </div>
+        <table id="cart-items">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+
+        <div class="cart-total">
+            <h3>Total: Rs. <span id="cart-total">0.00</span></h3>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            window.location.href = 'shop.html';
+        });
+    </script>
+</body>
+</html>
